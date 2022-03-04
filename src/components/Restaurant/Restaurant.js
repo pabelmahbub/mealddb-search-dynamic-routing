@@ -20,7 +20,7 @@ useEffect(() => {
        .then(response => response.json())
        .then(data => setMeals(data.meals));
        
-}, [searchText])
+}, [(searchText)])
 
 
   return (
@@ -29,14 +29,21 @@ useEffect(() => {
 
       <div style={{marginTop:30,marginBottom:30}}>
      
-        <input style={{width:500}} onChange={handleSearch} placeholder='Search your favorite  dish here' type='text'></input>
+        <input style={{width:500,paddingLeft:30,paddingTop:4,paddingBottom:4}} onChange={handleSearch} placeholder='Search your favorite  dish here' type='search'></input>
       </div>
       <div >
+      
+         
+      
      
        {
-        meals.length === 0 ? 
+        meals.length === 10 ? 
         
-        <Spinner animation="grow" /> :
+        <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+      
+          :
       
         <Row xs={1} md={2} lg={4}className="g-4">
                  {

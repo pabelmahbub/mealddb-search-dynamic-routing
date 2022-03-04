@@ -7,11 +7,11 @@ function Header() {
   
   return (
 
-    <div style={{justifyContent:'center',alignContent:'center',textAlign:'center'}}>
+    <div style={{justifyContent:'center',alignContent:'center',textAlign:'center',paddingTop:20}}>
 
-   <NavLink to="/restaurant" style={isActive => ({color: isActive ? "red" : "blue"})}>Restaurant</NavLink>
+   <NavLink to="/restaurant" style={isActive => ({color: isActive ? "green" : "blue",paddingRight:30,fontSize:24,color:'blue',textDecorationLine:'none'})}>Restaurant</NavLink>
    
-     <NavLink to="/menuDetail" style={isActive => ({color: isActive ? "red" : "blue"})}>Menu Detail</NavLink>
+     <NavLink to="/*" style={isActive => ({color: isActive ? "green" : "blue",fontSize:24,color:'blue',textDecorationLine:'none'})}>Not Found</NavLink>
 
    
 

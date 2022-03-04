@@ -11,7 +11,7 @@ function Meal(props) {
       
       <Col style={{marginRight:7,marginLeft:7,}}>
       <Card style={{height:550,borderRadius:7}}>
-        <Card.Img variant='top' src={strMealThumb} />
+        <Card.Img variant='top' src={strMealThumb} style={{height:300}}/>
         <Card.Body  style={{overflow:'scroll',paddingBottom:6}}>
           <Card.Title>{strMeal}</Card.Title>
           <Card.Text>
@@ -20,7 +20,7 @@ function Meal(props) {
         
         </Card.Body>
         <Link to={`/menuDetail/${idMeal}`}>
-          <button>Visit me </button>
+        <Button  style={{margin:5}}variant="primary">Know More</Button>{' '}
         </Link>
       </Card>
     </Col>

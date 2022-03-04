@@ -13,7 +13,7 @@ function App() {
              <Routes>
 
                 <Route exact path="/" element={<Restaurant/>}></Route>
-                 <Route path="/restaurant"element={<Restaurant/>}></Route>
+                 <Route exact path="/restaurant"element={<Restaurant/>}></Route>
                   <Route path="/menuDetail/:menuId" element={<MenuDetail/>}></Route>
                   <Route path="*"element={<NotFound/>}></Route>
 
