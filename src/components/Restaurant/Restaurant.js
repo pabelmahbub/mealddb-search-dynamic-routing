@@ -1,7 +1,7 @@
 import {React,useState,useEffect} from 'react'
 import Meal from '../Meal/Meal';
 import { Button } from 'react-bootstrap';
-
+import Header from '../Header/Header';
 import { Card,Row,Col,Spinner } from 'react-bootstrap';
 
 
@@ -25,11 +25,15 @@ useEffect(() => {
 
   return (
     <div>
-      <h2>Restaurant</h2>
-      <input onChange={handleSearch} placeholder='Search your fav. dish' type='text'></input>
+      <Header></Header>
 
+      <div style={{marginTop:30,marginBottom:30}}>
      
-{
+        <input style={{width:500}} onChange={handleSearch} placeholder='Search your favorite  dish here' type='text'></input>
+      </div>
+      <div >
+     
+       {
         meals.length === 0 ? 
         
         <Spinner animation="grow" /> :
@@ -43,15 +47,8 @@ useEffect(() => {
 
               </Row>
       }
-     
-     
-
-
-
-     
- 
+     </div>
   
- 
     </div>
   )
 }

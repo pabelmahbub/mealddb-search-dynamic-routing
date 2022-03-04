@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card,Button,Row,Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function Meal(props) {
-   const {strMeal,strCategory,strInstructions,strMealThumb,} = props.meal;
+   const {strMeal,strCategory,strInstructions,strMealThumb,idMeal} = props.meal;
   return (
     <div>
       
@@ -18,7 +19,9 @@ function Meal(props) {
           </Card.Text>
         
         </Card.Body>
-        <button>Hello</button>
+        <Link to={`/menuDetail/${idMeal}`}>
+          <button>Visit me </button>
+        </Link>
       </Card>
     </Col>
 </div>
