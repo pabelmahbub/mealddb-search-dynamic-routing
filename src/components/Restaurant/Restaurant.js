@@ -37,7 +37,7 @@ useEffect(() => {
       
      
        {
-        meals.length === 10 ? 
+        meals.length === 0 ? 
         
         <Spinner animation="border" role="status">
         <span className="visually-hidden">Loading...</span>
